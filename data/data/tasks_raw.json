@@ -1,0 +1,147 @@
+{
+  "schedule": {
+    "plan_start_date": "2026-12-01",
+    "daily_available_hours": {
+      "2026-12-01": 3,
+      "2026-12-02": 2,
+      "2026-12-03": 3,
+      "2026-12-04": 2,
+      "2026-12-05": 4,
+      "2026-12-06": 4,
+      "2026-12-07": 2,
+      "2026-12-08": 3,
+      "2026-12-09": 2,
+      "2026-12-10": 2,
+      "2026-12-11": 3,
+      "2026-12-12": 3
+    }
+  },
+  "tasks": [
+    {
+      "task_id": "T01",
+      "course": "مبادئ المحاسبة",
+      "task_type": "واجب",
+      "deadline": "2026-12-03",
+      "difficulty": 3,
+      "remaining_hours": 3,
+      "status": "لم تبدأ"
+    },
+    {
+      "task_id": "T02",
+      "course": "الاقتصاد الجزئي",
+      "task_type": "اختبار قصير",
+      "deadline": "2026-12-04",
+      "difficulty": 4,
+      "remaining_hours": 4,
+      "status": "قيد التنفيذ"
+    },
+    {
+      "task_id": "T03",
+      "course": "  مبادئ الإدارة ",
+      "task_type": "بحث",
+      "deadline": "07/12/2026",
+      "difficulty": 3,
+      "remaining_hours": 6,
+      "status": "لم تبدأ"
+    },
+    {
+      "task_id": "T04",
+      "course": "الإحصاء التجاري",
+      "task_type": "واجب",
+      "deadline": "2026-12-03",
+      "difficulty": 5,
+      "remaining_hours": "3",
+      "status": "in progress"
+    },
+    {
+      "task_id": "T05",
+      "course": "اللغة الإنجليزية",
+      "task_type": "عرض تقديمي",
+      "deadline": "2026-12-09",
+      "difficulty": 2,
+      "remaining_hours": 2,
+      "status": "لم تبدأ"
+    },
+    {
+      "task_id": "T05",
+      "course": "اللغة الإنجليزية",
+      "task_type": "عرض تقديمي",
+      "deadline": "2026-12-09",
+      "difficulty": 2,
+      "remaining_hours": 2,
+      "status": "لم تبدأ"
+    },
+    {
+      "task_id": "T06",
+      "course": "مبادئ التسويق",
+      "task_type": "مشروع جماعي",
+      "deadline": "2026-12-12",
+      "difficulty": 4,
+      "remaining_hours": 8,
+      "status": "قيد التنفيذ"
+    },
+    {
+      "task_id": "T07",
+      "course": "مبادئ المحاسبة",
+      "task_type": "اختبار نصفي",
+      "deadline": "2026-12-10",
+      "difficulty": 5,
+      "remaining_hours": 7,
+      "status": "لم تبدأ"
+    },
+    {
+      "task_id": "T08",
+      "course": "الاقتصاد الجزئي",
+      "task_type": "واجب",
+      "deadline": "2026-11-30",
+      "difficulty": 2,
+      "remaining_hours": 0,
+      "status": "done"
+    },
+    {
+      "task_id": "T09",
+      "course": "مبادئ الإدارة",
+      "task_type": "دراسة حالة",
+      "deadline": "2026-12-05",
+      "difficulty": 3,
+      "remaining_hours": 3,
+      "status": "لم تبدأ"
+    },
+    {
+      "task_id": "T10",
+      "course": "الإحصاء التجاري",
+      "task_type": "اختبار قصير",
+      "deadline": "",
+      "difficulty": 4,
+      "remaining_hours": 3,
+      "status": "لم تبدأ"
+    },
+    {
+      "task_id": "T11",
+      "course": "اللغة الإنجليزية",
+      "task_type": "واجب",
+      "deadline": "2026-12-02",
+      "difficulty": 1,
+      "remaining_hours": 1,
+      "status": "لم تبدأ"
+    },
+    {
+      "task_id": "T12",
+      "course": "مبادئ التسويق",
+      "task_type": "قراءة فصل",
+      "deadline": "2026-12-06",
+      "difficulty": 2,
+      "remaining_hours": 2,
+      "status": "لم تبدأ"
+    },
+    {
+      "task_id": "T13",
+      "course": "مهارات الحاسب",
+      "task_type": "تطبيق عملي",
+      "deadline": "2026-12-08",
+      "difficulty": 3,
+      "remaining_hours": 4,
+      "status": "Not started"
+    }
+  ]
+}
