@@ -92,6 +92,7 @@ with st.sidebar:
 
 st.title("📚 المساعد الدراسي الذكي")
 st.info("أداة مساعدة تقترح جدول مذاكرة، والقرار النهائي وتعديل الجدول بيد الطالب.")
+st.link_button("🤖 افتح وكيل Gemini Enterprise (المساعد الدراسي الذكي)", "https://vertexaisearch.cloud.google/home/cid/3dbf9c2f-1fc2-48a6-92a6-1531a573d5b3/agents/r/agent/7956485310315971303/session/-")
 
 t1, t2, t3, t4, t5 = st.tabs(["① إدخال المهام", "② التحقق والتنظيف", "③ جدول المذاكرة", "④ تحديث الإنجاز", "⑤ محادثة مع Gemini"])
 
