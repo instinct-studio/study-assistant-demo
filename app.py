@@ -93,7 +93,7 @@ with st.sidebar:
 st.title("📚 المساعد الدراسي الذكي")
 st.info("أداة مساعدة تقترح جدول مذاكرة، والقرار النهائي وتعديل الجدول بيد الطالب.")
 
-t1, t2, t3, t4 = st.tabs(["① إدخال المهام", "② التحقق والتنظيف", "③ جدول المذاكرة", "④ تحديث الإنجاز"])
+t1, t2, t3, t4, t5 = st.tabs(["① إدخال المهام", "② التحقق والتنظيف", "③ جدول المذاكرة", "④ تحديث الإنجاز", "⑤ محادثة مع Gemini"])
 
 # ---------------- ① الإدخال ----------------
 with t1:
@@ -274,3 +274,28 @@ with t4:
             else:
                 st.caption("لم يتغير توزيع الساعات.")
             st.caption("افتح تبويب «جدول المذاكرة» لرؤية الجدول الجديد.")
+
+# ---------------- ⑤ محادثة حرة مع Gemini ----------------
+with t5:
+    st.subheader("💬 محادثة حرة مع المساعد (Gemini)")
+    st.caption("اسأل عن المذاكرة أو تنظيم الوقت أو عن جدولك. المساعد يعمل بنموذج Gemini من Google، والقرار النهائي بيدك.")
+    ss.setdefault("chat", [])
+    if not key:
+        st.warning("المحادثة تحتاج مفتاح Gemini. أضفه في الخانة الجانبية «مفتاح Gemini».")
+    for m in ss.chat:
+        with st.chat_message("user" if m["role"] == "user" else "assistant"):
+            st.markdown(ltr(m["text"]))
+    msg = st.chat_input("اكتب سؤالك هنا...", disabled=not key)
+    if msg:
+        ss.chat.append({"role": "user", "text": msg})
+        try:
+            with st.spinner("Gemini يكتب الرد..."):
+                reply = llm.chat(key, ss.chat)
+            ss.chat.append({"role": "assistant", "text": reply})
+        except llm.LLMError as e:
+            ss.chat.pop()
+            st.error(f"تعذر استخدام النموذج اللغوي: {e}")
+        st.rerun()
+    if ss.chat and st.button("🗑 مسح المحادثة"):
+        ss.chat = []
+        st.rerun()
