@@ -78,3 +78,14 @@ def explain(api_key, result, start):
 البيانات:
 {json.dumps(summary, ensure_ascii=False)}"""
     return _call(api_key, prompt)
+
+
+def chat(api_key, history):
+    """محادثة حرة. history: قائمة {role: user|assistant, text}. يُرسل آخر 10 رسائل فقط."""
+    lines = "\n".join(("الطالب: " if m["role"] == "user" else "المساعد: ") + m["text"] for m in history[-10:])
+    prompt = f"""أنت المساعد الدراسي الذكي، مرشد دراسي لطلاب الجامعة. أجب بالعربية وبلغة بسيطة وقصيرة (حتى 6 جمل).
+ساعد في تنظيم الوقت والمذاكرة وفهم الجدول. لا تخترع معلومات، ولا تطلب بيانات شخصية. القرار النهائي للطالب.
+المحادثة حتى الآن:
+{lines}
+المساعد:"""
+    return _call(api_key, prompt)
